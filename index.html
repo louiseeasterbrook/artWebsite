@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleSheet/style.css" />
+
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/000c03bf00.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Carla's Art</title>
+  </head>
+  <body>
+    <div class="shopping-container">
+      <div class="shop-header">
+        <h4>Shopping Cart</h4>
+        <div class="cross-container">
+          <div class="cross"></div>
+        </div>
+      </div>
+      <div class="cart-main">
+        <p class="empty">Your cart is currently Empty</p>
+      </div>
+
+      <!-- cart item added here  -->
+
+      <div class="shop-confirm hide">
+        <div class="price-container">
+          <h3>Subtotal</h3>
+          <h3 id="finalPrice">$0.00</h3>
+        </div>
+        <p>Shipping is calculated at checkout</p>
+        <div class="checkout-btn"><p>Checkout</p></div>
+      </div>
+    </div>
+
+    <div class="web-cover"></div>
+
+    <!-- HEADER BIT -->
+    <header>
+      <div class="tab-container">
+        <a href="/index.html" class="page-title">Carla's Art</a>
+
+        <i class="fas fa-shopping-cart"
+          ><span class="notification hide"></span
+        ></i>
+      </div>
+    </header>
+    <div class="top-section">
+      <h4 class="intro-btn">Shop My Products</h4>
+      <img src="./images/main7.jpeg" id="main-img" alt="" />
+    </div>
+
+    <!-- ITEMS -->
+    <div class="bottom-container">
+      <!-- WELCOME CONT -->
+      <!-- <div class="welcome-container">
+       
+          <div class="welcomeimg-shape">
+            <img src="images/extra6.jpeg" alt="" />
+          </div>
+       
+        <div class="welcome-text">
+          <h2>Welcome</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            id quia aliquid? Aspernatur voluptatibus recusandae quos error ipsum
+            quisquam, ipsam minima commodi laudantium sapiente reiciendis
+            impedit hic dolores! Quos, blanditiis.
+          </p>
+        </div>
+      </div> -->
+      <div class="section-1">
+        <h1>My Products</h1>
+        <div class="item-container">
+          <!-- ITEM 1 -->
+          <div class="item" id="item-1" data-product="0">
+            <div class="img-holder">
+              <img src="/images/product-1.jpeg" alt="" class="item-image" />
+            </div>
+            <h3 class="item-title">Statue Head</h3>
+            <p class="item-price">$59.99</p>
+          </div>
+          <!-- ITEM 2 -->
+          <div class="item" id="item-2" data-product="1">
+            <div class="img-holder">
+              <img src="/images/product-2.jpeg" alt="" class="item-image" />
+            </div>
+            <h3 class="item-title">Eternity Vase</h3>
+            <p class="item-price">$69.99</p>
+          </div>
+          <!-- ITEM 3 -->
+          <div class="item" id="item-3" data-product="2">
+            <div class="img-holder">
+              <img src="/images/product-3.jpeg" alt="" class="item-image" />
+            </div>
+            <h3 class="item-title">Motions Vase</h3>
+            <p class="item-price">$79.99</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT POPUP -->
+      <div class="item-popup hide">
+        <div class="cross-container"><div class="cross"></div></div>
+        <div class="popup-img-cont">
+          <img src="" alt="" id="popup-image" />
+        </div>
+
+        <div class="item-info">
+          <h2 id="popup-title"></h2>
+          <p id="popup-price"></p>
+          <p id="popup-desc"></p>
+          <!-- add button for each product -->
+          <a class="add-btn" id="addBtn-0"
+            ><span class="add-btn-animation"></span
+          ></a>
+          <p id="buy-msg">Item added to cart!</p>
+        </div>
+      </div>
+      <!-- rgb(235, 235, 235); -->
+    </div>
+    <div class="signup-container">
+      <div class="signup-text">
+        <h2>Stay in the Know</h2>
+        <p>
+          Sign up with your email address to recieve updates of new products.
+        </p>
+      </div>
+
+      <div class="input-container">
+        <input class="signup-input" type="text" placeholder="Email Address" />
+        <a class="input-btn">Sign up</a>
+        <h4 class="success-msg">Thanks for signing up!</h4>
+      </div>
+      <h4 class="signup-msg">Thanks for signing up!</h4>
+    </div>
+
+    <footer></footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
