@@ -16,18 +16,18 @@ p {
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 0;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1rem;
   margin: 0;
 }
 
 h2 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 750px) {
@@ -37,7 +37,7 @@ h2 {
   }
 
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin: 0;
   }
 
@@ -46,7 +46,7 @@ h2 {
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -347,7 +347,8 @@ header {
   color: white;
   font-weight: 200;
   border-radius: 7px;
-  width: 17rem;
+  width: 75%;
+  max-width: 17rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -392,7 +393,7 @@ header {
 
 .item-container {
   display: flex;
-  max-width: 1000px;
+  max-width: 850px;
   margin: auto;
   justify-content: space-between;
   align-items: center;
@@ -852,10 +853,6 @@ input {
   .input-container {
     flex-direction: column;
     gap: 1rem;
-    // background-color: darkmagenta;
-    input {
-      // max-width: 80%;
-    }
   }
 
   .signup-input {
