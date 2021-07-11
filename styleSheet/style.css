@@ -456,7 +456,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 5rem;
+    gap: 7rem;
   }
   .item {
     width: 90%;
@@ -904,13 +904,13 @@ input {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 1rem;
   }
   .signup-input {
-    max-width: 100%;
+    width: 80%;
   }
   .input-btn {
-    width: 21rem;
+    width: 80%;
+    margin: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
