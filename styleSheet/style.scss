@@ -141,7 +141,7 @@ h2 {
   padding: 1rem;
   cursor: pointer;
   transition: 0.2s;
-  margin: 1rem;
+
   p {
     text-align: center;
     text-transform: uppercase;
@@ -160,10 +160,9 @@ h2 {
     height: 40%;
     gap: 3rem;
   }
-  
   .price-container {
-    margin-bottom:2rem;
-  
+    margin: 1rem;
+  }
 }
 
 //___________________________________________________________________
@@ -435,7 +434,7 @@ header {
 
   .item-container {
     flex-direction: column;
-    gap: 7rem;
+    gap: 4rem;
   }
 
   .item {

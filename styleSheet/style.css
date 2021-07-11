@@ -144,7 +144,6 @@ h2 {
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  margin: 1rem;
 }
 
 .checkout-btn p {
@@ -165,6 +164,9 @@ h2 {
   .shop-confirm {
     height: 40%;
     gap: 3rem;
+  }
+  .price-container {
+    margin: 1rem;
   }
 }
 
@@ -456,7 +458,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 7rem;
+    gap: 4rem;
   }
   .item {
     width: 90%;
