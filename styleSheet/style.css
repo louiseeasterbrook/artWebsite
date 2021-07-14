@@ -67,15 +67,19 @@ h2 {
   width: 100%;
   height: 100%;
   z-index: 950;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: black;
   display: none;
 }
 
 .shopping-active2 {
-  background-color: black;
-  opacity: 0.3;
   display: block;
-  -webkit-transition: 1s;
-  transition: 1s;
+}
+
+.web-cover-opacity {
+  opacity: 0.3;
 }
 
 .stop-scrolling {
@@ -123,8 +127,19 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
+  opacity: 1;
   overflow-y: auto;
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+}
+
+.shop-confirm-slide {
+  -webkit-transform: translateY(23rem);
+          transform: translateY(23rem);
+  opacity: 0;
 }
 
 .price-container {
@@ -202,7 +217,7 @@ h2 {
 
 .buy-img {
   width: 5rem;
-  height: 4rem;
+  height: 5rem;
   background-color: lightblue;
   overflow: hidden;
   position: relative;
@@ -383,8 +398,17 @@ header {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.intro-animation {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  opacity: 1;
 }
 
 .intro-btn:hover {
@@ -446,6 +470,50 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.7rem;
+  -webkit-transform: translateY(7rem);
+          transform: translateY(7rem);
+  opacity: 0;
+}
+
+.item-show {
+  -webkit-animation: item-slide 0.7s forwards;
+          animation: item-slide 0.7s forwards;
+}
+
+#item-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+#item-3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes item-slide {
+  0% {
+    -webkit-transform: translateY(7rem);
+            transform: translateY(7rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes item-slide {
+  0% {
+    -webkit-transform: translateY(7rem);
+            transform: translateY(7rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 800px) {

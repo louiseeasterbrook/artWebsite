@@ -55,6 +55,9 @@ const closeShopping = function () {
 
 const pagePause = function () {
   mainCont.classList.toggle("shopping-active2");
+  setTimeout(() => {
+    mainCont.classList.toggle("web-cover-opacity");
+  }, 100);
   document.body.classList.toggle("stop-scrolling");
 };
 
@@ -170,6 +173,7 @@ const addToCart = function () {
   if (btnCount == 2) {
     closeShopping();
     openShopping();
+    //here
     btnCount = 0;
   } else {
     //remove empty message
@@ -259,8 +263,17 @@ const cartRemove = function (e) {
       document.querySelector(".empty").classList.remove("hide");
       //hide shoppingcart notification
       document.querySelector(".notification").classList.add("hide");
-      //remove checkout section
-      document.querySelector(".shop-confirm").classList.add("hide");
+      //remove checkout section animation
+      document
+        .querySelector(".shop-confirm")
+        .classList.add("shop-confirm-slide");
+      //remove checkout section from dom
+      setTimeout(() => {
+        document.querySelector(".shop-confirm").classList.add("hide");
+        document
+          .querySelector(".shop-confirm")
+          .classList.remove("shop-confirm-slide");
+      }, 1000);
     }
   }, 700);
 };
@@ -335,9 +348,45 @@ const errorMessage = function (message) {
 signupBtn.addEventListener("click", EnterSignup);
 
 //______________________________________________________________________________
+
+//ELEMENT
+const allItems = document.querySelectorAll(".item");
+
+//FUNCTION
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entries);
+  // console.log(entry);
+
+  if (!entry.isIntersecting) return;
+  // console.log("hello");
+  // console.log(entry.target);
+  //if section is intersection the 'section-hide' class with be removed and a transition class will be added
+  // entry.target.classList.remove("section-hide");
+  entries.forEach((entry) => entry.target.classList.add("item-show"));
+
+  // console.log(entry);
+  observer.unobserve(entry.target);
+};
+
+//OBSERVER
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.05,
+});
+
+//LINK
+allItems.forEach(function (section) {
+  console.log(section);
+  sectionObserver.observe(section);
+  //adds a class to hide all sections
+  // section.classList.add("section-hide");
+});
+
 //______________________________________________________________________________
 
 //______________________________________________________________________________
+
 const crossPopup = document.querySelectorAll(".cross-container");
 
 //open cart from shopping button
@@ -354,5 +403,13 @@ const addbtn = document.querySelectorAll(".add-btn");
 // addbtn.addEventListener("click", addToCart);
 
 addbtn.forEach((el) => el.addEventListener("click", addToCart));
+
+const openbtn = document.querySelector(".intro-btn");
+setTimeout(() => {
+  openbtn.classList.add("intro-animation");
+}, 400);
+
+const ready = function () {};
+window.addEventListener("load", ready);
 
 //______________________________________________________________________________
