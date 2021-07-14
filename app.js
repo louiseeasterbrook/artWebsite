@@ -355,17 +355,11 @@ const allItems = document.querySelectorAll(".item");
 //FUNCTION
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  console.log(entries);
-  // console.log(entry);
 
   if (!entry.isIntersecting) return;
-  // console.log("hello");
-  // console.log(entry.target);
-  //if section is intersection the 'section-hide' class with be removed and a transition class will be added
-  // entry.target.classList.remove("section-hide");
+
   entries.forEach((entry) => entry.target.classList.add("item-show"));
 
-  // console.log(entry);
   observer.unobserve(entry.target);
 };
 

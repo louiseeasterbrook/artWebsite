@@ -218,7 +218,6 @@ h2 {
 .buy-img {
   width: 5rem;
   height: 5rem;
-  background-color: lightblue;
   overflow: hidden;
   position: relative;
   border-radius: 5rem;
@@ -228,8 +227,9 @@ h2 {
 
 .buy-img img {
   height: 100%;
-  position: absolute;
-  bottom: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .buy-info {
