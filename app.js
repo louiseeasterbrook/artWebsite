@@ -210,7 +210,7 @@ const addToCart = function () {
     if (cartAdd) {
       const cartHTML = `<div class="cart-item-container" data-item=${currItem} id="cart-${currItem}">
     <div class="buy-img">
-      <img src="${productArray[currItem][3]}" alt=""  />
+      <img src="${productArray[currItem][3]}" alt="${productArray[currItem][0]}"  />
     </div>
     <div class="buy-info">
       <h4>${productArray[currItem][0]}</h4>
