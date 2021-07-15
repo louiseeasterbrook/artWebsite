@@ -852,9 +852,8 @@ header {
           box-sizing: border-box;
   width: 100%;
   background-color: #ececec;
-  height: 35vh;
-  padding-top: 4rem;
-  padding-bottom: 9rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
