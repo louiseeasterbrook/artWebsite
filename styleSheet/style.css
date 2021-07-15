@@ -853,7 +853,7 @@ header {
   width: 100%;
   background-color: #ececec;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -976,7 +976,7 @@ input {
   }
   .input-btn {
     width: 80%;
-    margin: 2rem;
+    margin: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

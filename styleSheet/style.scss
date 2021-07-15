@@ -734,7 +734,7 @@ header {
   background-color: $main;
 
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -822,9 +822,6 @@ input {
 }
 
 @media screen and (max-width: 850px) {
-  .signup-container {
-    // height: 50vh;
-  }
   .input-container {
     flex-direction: column;
   }
@@ -835,7 +832,7 @@ input {
 
   .input-btn {
     width: 80%;
-    margin: 2rem;
+    margin: 1rem;
   }
 }
 
