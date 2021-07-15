@@ -965,9 +965,6 @@ input {
 }
 
 @media screen and (max-width: 850px) {
-  .signup-container {
-    height: 50vh;
-  }
   .input-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
