@@ -319,7 +319,7 @@ const EnterSignup = function () {
   //check if email is valid
   if (!validEmail(emailString)) {
     //show error messgae
-    errorMessage("Please enter a valid email");
+    messgaeCont.classList.add("fade");
     return;
   }
   //add class to show thankyou message
@@ -338,11 +338,6 @@ const EnterSignup = function () {
 
 const validEmail = function (email) {
   return /\S+@\S+\.\S+/.test(email);
-};
-
-const errorMessage = function (message) {
-  messgaeCont.innerHTML = message;
-  messgaeCont.classList.add("fade");
 };
 
 signupBtn.addEventListener("click", EnterSignup);
@@ -379,8 +374,6 @@ allItems.forEach(function (section) {
 
 //______________________________________________________________________________
 
-//______________________________________________________________________________
-
 const crossPopup = document.querySelectorAll(".cross-container");
 
 //open cart from shopping button
@@ -398,12 +391,27 @@ const addbtn = document.querySelectorAll(".add-btn");
 
 addbtn.forEach((el) => el.addEventListener("click", addToCart));
 
-const openbtn = document.querySelector(".intro-btn");
+const openBtn = document.querySelector(".intro-btn");
 setTimeout(() => {
-  openbtn.classList.add("intro-animation");
+  openBtn.classList.add("intro-animation");
 }, 400);
 
 const ready = function () {};
 window.addEventListener("load", ready);
 
 //______________________________________________________________________________
+//______________________________________________________________________________
+//AUTOMIC SCROLL TRIGGERED BY OPENING BUTTON
+
+const section1 = document.querySelector(".section-1");
+
+openBtn.addEventListener("click", function (e) {
+  const section1Pos = section1.getBoundingClientRect();
+
+  //window scroll
+  window.scrollTo({
+    left: section1Pos.left,
+    top: section1Pos.top,
+    behavior: "smooth",
+  });
+});

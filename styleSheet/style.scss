@@ -76,7 +76,7 @@ h2 {
   height: 100%;
   z-index: 950;
   opacity: 0;
-  transition: 0.4s;
+  transition: 0.3s;
   background-color: black;
   display: none;
 }
@@ -392,11 +392,10 @@ header {
 
 //___________________________________________________________________
 
-.section-1 {
-  h1 {
-    text-align: center;
-    margin: 3rem;
-  }
+.prod-title {
+  text-align: center;
+  margin: 3rem;
+  position: relative;
 }
 
 //___________________________________________________________________
@@ -757,7 +756,6 @@ header {
   width: 100%;
   opacity: 1;
   transition: 0.4s;
-  margin: 1rem;
 }
 
 .fade1 {
@@ -777,14 +775,12 @@ input {
 
 .input-btn {
   cursor: pointer;
-  height: 2.2rem;
   background-color: $btn;
   width: 8rem;
   text-align: center;
   line-height: 2.2rem;
   text-transform: uppercase;
   text-decoration: none;
-  margin-left: 0.3rem;
   border-radius: 7px;
   color: white;
   font-weight: bold;
@@ -803,6 +799,7 @@ input {
   transition: 0.2s;
   opacity: 0;
   padding: 0.8rem;
+  background-color: brown;
 }
 .success-msg {
   position: absolute;

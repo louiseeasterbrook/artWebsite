@@ -68,8 +68,8 @@ h2 {
   height: 100%;
   z-index: 950;
   opacity: 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background-color: black;
   display: none;
 }
@@ -424,9 +424,10 @@ header {
      object-position: center;
 }
 
-.section-1 h1 {
+.prod-title {
   text-align: center;
   margin: 3rem;
+  position: relative;
 }
 
 .bottom-container {
@@ -890,7 +891,6 @@ header {
   opacity: 1;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  margin: 1rem;
 }
 
 .fade1 {
@@ -912,14 +912,12 @@ input {
 
 .input-btn {
   cursor: pointer;
-  height: 2.2rem;
   background-color: #3d99e4;
   width: 8rem;
   text-align: center;
   line-height: 2.2rem;
   text-transform: uppercase;
   text-decoration: none;
-  margin-left: 0.3rem;
   border-radius: 7px;
   color: white;
   font-weight: bold;
@@ -942,6 +940,7 @@ input {
   transition: 0.2s;
   opacity: 0;
   padding: 0.8rem;
+  background-color: brown;
 }
 
 .success-msg {
